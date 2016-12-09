@@ -16,7 +16,7 @@ namespace StaticDataAndMembers
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Test Git");
         }
     }
 }
