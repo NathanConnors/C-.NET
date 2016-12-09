@@ -12,6 +12,12 @@ namespace SimpleClassExample
         public string petName;
         public int currSpeed;
 
+        public Car()
+        {
+            petName = "Chuck";
+            currSpeed = 10;
+        }
+
         // The functionality of the Car.
         public void PrintState()
         {
