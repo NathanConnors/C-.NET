@@ -9,16 +9,16 @@ namespace SimpleClassExample
     class Motorcycle
     {
         public int driverIntensity;
-        public string name;
+        public string driverName;
 
         public void SetDriverName(string name)
         {
-            this.name = name;
+            driverName = name;
         }
 
         public void PopAWheely()
         {
-            for (int i = 0; i <= driverIntensity; i++)
+            for (int i = 0; i < driverIntensity; i++)
             {
                 Console.WriteLine("Yeeeee Haaaaaeewww!");
             }
@@ -31,13 +31,23 @@ namespace SimpleClassExample
          * get a 'free' default constructor.
          */
 
-        // Default Constructor
+        // Constructor Chaining.
         public Motorcycle() { }
-
-        // Non-Default Constructor
         public Motorcycle(int intensity)
+            : this(intensity, "") { }
+        public Motorcycle(string name)
+            : this(0, name) { }
+
+        // Master constructor
+        public Motorcycle(int intensity, string name)
         {
+            if(intensity > 5)
+            {
+                intensity = 5;
+            }
+
             driverIntensity = intensity;
+            driverName = name;
         }
     }
 }
