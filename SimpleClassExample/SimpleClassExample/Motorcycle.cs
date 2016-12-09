@@ -24,6 +24,11 @@ namespace SimpleClassExample
             }
         }
 
+        public void displayName()
+        {
+            Console.WriteLine(driverName);
+        }
+
         /* 
          * If you make a non-default constructor without defining
          * a default you lose the default constructor, however
@@ -31,16 +36,27 @@ namespace SimpleClassExample
          * get a 'free' default constructor.
          */
 
-        // Constructor Chaining.
-        public Motorcycle() { }
+        // Constructor chaining.
+        public Motorcycle()
+        {
+            Console.WriteLine("Defualt constructor");
+        }
         public Motorcycle(int intensity)
-            : this(intensity, "") { }
+            : this(intensity, "")
+        {
+            Console.WriteLine("Integer non-default constructor");
+        }
+
         public Motorcycle(string name)
-            : this(0, name) { }
+            : this(1, name)
+        {
+            Console.WriteLine("String non-default constructor");
+        }
 
         // Master constructor
         public Motorcycle(int intensity, string name)
         {
+            Console.WriteLine("Master constructor called");
             if(intensity > 5)
             {
                 intensity = 5;
