@@ -20,15 +20,15 @@ namespace SimpleClassExample
         }
 
         // Non-Default Constructors
-        public Car(string pn)
+        public Car(string petName)
         {
-            petName = pn;
+            this.petName = petName;
         }
 
-        public Car(string pn, int cs)
+        public Car(string petName, int currSpeed)
         {
-            petName = pn;
-            currSpeed = cs;
+            this.petName = petName;
+            this.currSpeed = currSpeed;
         }
 
         // The functionality of the Car.

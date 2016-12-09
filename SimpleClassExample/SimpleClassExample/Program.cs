@@ -18,7 +18,8 @@ namespace SimpleClassExample
             Console.WriteLine("***** Fun with Class Types *****");
 
             //Motorcycle Object Call
-            Motorcycle mc = new Motorcycle();
+            Motorcycle mc = new Motorcycle(2);
+            mc.SetDriverName("George");
             mc.PopAWheely();
 
             // Default Constructor
