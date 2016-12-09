@@ -22,8 +22,13 @@ namespace StaticDataAndMembers
 
         public SavingsAccount(double balance)
         {
-            currInterestRate = 0.04;
             currBalance = balance;
+        }
+
+        static SavingsAccount()
+        {
+            Console.WriteLine("Static constructor!");
+            currInterestRate = 0.04;
         }
 
         // Static members to get/set interest rate.
