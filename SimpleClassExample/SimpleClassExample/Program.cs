@@ -17,15 +17,19 @@ namespace SimpleClassExample
         {
             Console.WriteLine("***** Fun with Class Types *****\n");
 
-            // Allocate and configure a Car object.
+            // Default Constructor
             Car myCar = new Car();
+            myCar.PrintState();
 
-            // Speed up the car a few times and print new state.
-            for (int i = 0; i <= 10; i++)
-            {
-                myCar.SpeedUp(5);
-                myCar.PrintState();
-            }
+            // Non-Default Constructor - 1 Parameter
+            Car myCar2 = new Car("Harry");
+            myCar2.PrintState();
+
+            // Non-Default Constructr - 2 Parameters
+            Car myCar3 = new Car("Sally", 40);
+            myCar3.PrintState();
+
+            
 
             Console.ReadLine();
         }

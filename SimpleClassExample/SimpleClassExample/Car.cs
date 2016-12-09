@@ -12,10 +12,23 @@ namespace SimpleClassExample
         public string petName;
         public int currSpeed;
 
+        // Default Constructor.
         public Car()
         {
             petName = "Chuck";
             currSpeed = 10;
+        }
+
+        // Non-Default Constructors
+        public Car(string pn)
+        {
+            petName = pn;
+        }
+
+        public Car(string pn, int cs)
+        {
+            petName = pn;
+            currSpeed = cs;
         }
 
         // The functionality of the Car.
