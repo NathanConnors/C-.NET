@@ -16,7 +16,13 @@ namespace StaticDataAndMembers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Able to push two commits at once");
+            Console.WriteLine("Static data member with objects practice");
+
+            SavingsAccount s1 = new SavingsAccount(50);
+            SavingsAccount s2 = new SavingsAccount(100);
+            SavingsAccount s3 = new SavingsAccount(10000.75);
+            Console.ReadLine();
+
         }
     }
 }
