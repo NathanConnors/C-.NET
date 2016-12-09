@@ -15,7 +15,11 @@ namespace SimpleClassExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("***** Fun with Class Types *****\n");
+            Console.WriteLine("***** Fun with Class Types *****");
+
+            //Motorcycle Object Call
+            Motorcycle mc = new Motorcycle();
+            mc.PopAWheely();
 
             // Default Constructor
             Car myCar = new Car();
