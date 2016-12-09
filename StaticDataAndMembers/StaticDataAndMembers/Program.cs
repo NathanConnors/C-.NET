@@ -1,6 +1,6 @@
 ﻿/*
- * C# 6.0 and the .NET 4.6 Framework" by Andrew Troelsen & Philip Japikse
- * Pg 167 - Defining Static Field Data
+ * C# 6.0 and the .NET 4.6 Framework" by Andrew Troelsen & Philip Japikse.
+ * Pg 167 - Defining Static Field Data.
  */
 
 
@@ -18,14 +18,20 @@ namespace StaticDataAndMembers
         {
             Console.WriteLine("Static data member with objects practice");
 
+            // Instantiate object.
             SavingsAccount s1 = new SavingsAccount(50);
-            SavingsAccount s2 = new SavingsAccount(100);
-
+            
             // Print the current interest rate.
             Console.WriteLine("Interest rate is: {0}", SavingsAccount.GetInterestRate());
 
-            // Make new object, this does NOT 'reset' the interest rate.
-            SavingsAccount s3 = new SavingsAccount(10000.75);
+            // Try to change the interest rate via property.
+            SavingsAccount.SetInterestRate(0.08);
+
+            // Proves change worked.
+            Console.WriteLine("Interest rate is: {0}", SavingsAccount.GetInterestRate());
+
+            // When new object is made it resets interest rate.
+            SavingsAccount s2 = new SavingsAccount(100);
             Console.WriteLine("Interest rate is: {0}", SavingsAccount.GetInterestRate());
 
             Console.ReadLine();

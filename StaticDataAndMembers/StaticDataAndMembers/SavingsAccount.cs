@@ -18,10 +18,11 @@ namespace StaticDataAndMembers
          */
 
         // A static point of data.
-        public static double currInterestRate = 0.04;
+        public static double currInterestRate;
 
         public SavingsAccount(double balance)
         {
+            currInterestRate = 0.04;
             currBalance = balance;
         }
 
