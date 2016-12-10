@@ -15,15 +15,26 @@ using System.Threading.Tasks;
 	 {
 		 static void Main(string[] args)
 		 {
-			 StaticClass sc = new StaticClass();
+			 // You can still access the static class
+			 // without creating an object.
+			 TimeUtilClass.PrintDate();
+			 TimeUtilClass.PrintTime();
+			 
+			 // This will not compile when class is static!
+			 //TimeUtilClass sc = new TimeUtilClass();
+			 
+			 Console.ReadLine();
 		 }
 	 }
 	 
-	 class StaticClass
+	 // Static classes can only
+	 // contain static members!
+	 static class TimeUtilClass
 	{
-		public StaticClass()
-		{
-			Console.WriteLine("New Object!");
-		}
+		public static void PrintTime()
+		{ Console.WriteLine(DateTime.Now.ToShortTimeString()); }
+		
+		public static void PrintDate()
+		{ Console.WriteLine(DateTime.Today.ToShortDateString()); }
 	}
  }
