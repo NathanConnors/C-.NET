@@ -21,6 +21,23 @@
 			 
 			 c.DisplayStats();
 			 
+			 // Garage implementation
+			 Garage g = new Garage();
+			 
+			 // Prints 1, set by default constructor
+			 Console.WriteLine("Number of Cars: {0}", g.NumberOfCars);
+			 
+			 // Runs now, calls to default value set with default constructor
+			 // which is still empty but does not cause runtime error
+			 Console.WriteLine(g.MyAuto.PetName);
+			 
+			 
+			 // Use previous car object as baseline for garage
+			 Garage g2 = new Garage();
+			 g2.MyAuto = c;
+			 Console.WriteLine("Number of Cars: {0}", g2.NumberOfCars);
+			 Console.WriteLine(g2.MyAuto.PetName);
+			 
 			 Console.ReadLine();
 		 }
 	 }
@@ -37,6 +54,28 @@
 			 Console.WriteLine("Car Name: {0}", PetName);
 			 Console.WriteLine("Speed: {0}", Speed);
 			 Console.WriteLine("Color: {0}", Color);
+		 }
+	 }
+	 
+	 class Garage
+	 {
+		 // The hidden int backing field is set to zero
+		 public int NumberOfCars { get; set; }
+		 
+		 // The hidden Car backing field is set to null
+		 public Car MyAuto { get; set; }
+		 
+		 // Constructor used to override default
+		 public Garage()
+		 {
+			 MyAuto = new Car();
+			 NumberOfCars = 1;
+		 }
+		 
+		 public Garage(Car car, int number)
+		 {
+			 MyAuto = car;
+			 NumberOfCars = number;
 		 }
 	 }
  }
