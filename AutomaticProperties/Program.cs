@@ -48,6 +48,8 @@
 		 public string PetName {get; set; }
 		 public int Speed {get; set; }
 		 public string Color {get; set; }
+		  
+		 //private int numberOfDoors = 2;
 		 
 		 public void DisplayStats()
 		 {
@@ -60,10 +62,10 @@
 	 class Garage
 	 {
 		 // The hidden int backing field is set to zero
-		 public int NumberOfCars { get; set; }
+		 public int NumberOfCars { get; set; } = 1;
 		 
 		 // The hidden Car backing field is set to null
-		 public Car MyAuto { get; set; }
+		 public Car MyAuto { get; set; } = new Car();
 		 
 		 // Constructor used to override default
 		 public Garage()
