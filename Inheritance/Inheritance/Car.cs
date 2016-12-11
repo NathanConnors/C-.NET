@@ -23,7 +23,7 @@ namespace Inheritance
             maxSpeed = max;
         }
 
-		public int speed
+		public int Speed
         {
 			get { return currSpeed; }
             set
@@ -36,4 +36,6 @@ namespace Inheritance
             }
         }
     }
+
+    class MiniVan : Car { }
 }

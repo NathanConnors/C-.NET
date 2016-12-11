@@ -15,6 +15,20 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Inheritance Practice");
+            // make a car object and set max speed.
+            Car myCar = new Car();
+
+            // set the current speed, and print it.
+            myCar.Speed = 50;
+            Console.WriteLine("My car is going {0} MPH", myCar.Speed);
+
+            // make minivan object
+            MiniVan mini = new MiniVan();
+            mini.Speed = 10;
+            Console.WriteLine("My van is going {0} MPH", mini.Speed);
+            Console.ReadLine();
+
         }
     }
 }
