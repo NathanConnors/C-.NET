@@ -36,6 +36,10 @@ namespace Inheritance
             }
         }
     }
+    
+    // if class is sealed it cannot be inherited.
+    sealed class MiniVan : Car { }
 
-    class MiniVan : Car { }
+    // this is an error.
+    //class DeluxeMiniVan : MiniVan { }
 }
