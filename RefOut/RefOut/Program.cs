@@ -36,6 +36,20 @@ namespace RefOut
             return(sum / values.Length);
         }
 
+        // output parameters
+        static void Add(int x, int y, out int ans)
+        {
+            ans = x + y;
+        }
+
+        // returning multiple output parameters
+        static void FillTheseValues(out int a, out string b, out bool c)
+        {
+            a = 9;
+            b = "Nate";
+            c = true;
+        }
+
         static void Main(string[] args)
         {
             // reference operator, passing data by ref.
@@ -59,6 +73,21 @@ namespace RefOut
             double[] data = { 4.0, 3.2, 5.7 };
             double average = CalculateAverage(data);
             Console.WriteLine("Average of data is: {0}", average);
+
+            // output parameters use.
+            Console.WriteLine();
+            Console.WriteLine("'out' operator:");
+            int ans;
+            Add(90, 90, out ans);
+            Console.WriteLine("Answer is: {0}", ans);
+
+            // multiple output parameters
+            Console.WriteLine("Multiple outputparameters");
+            int i; string str; bool b;
+
+            FillTheseValues(out i, out str, out b);
+
+            Console.WriteLine("Int: {0}, String: {1}, Bool: {2}", i, str, b);
 
             Console.ReadLine();
         }
